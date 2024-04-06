@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>AL Universe Hub</title>
+</head>
+<body>
+
+
+    <main class="container mx-auto m-4 p-4">
+        <section class="mx-auto text-center">
+            <h2 class="text-4xl font-bold">AI Universe Hub</h2> <br>
+            <button class="btn px-5 bg-red-400 text-white">Sort By Date</button>
+        </section>
+<br> <br>
+        <section>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2" id="ai-card-container">
+
+            </div>
+        </section>
+
+        <section>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="show_ai_details" class="modal">
+            <div class="modal-box">
+              <div id="ai-details-container" class="flex gap-4 justify-around items-center">
+             
+              </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn btn-sm btn-circle text-white bg-red-400 absolute right-2 top-2">✕</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+        </section>
+        <div class="m-4 text-center">
+            <button  onclick="handelSeeMore()" id="see-more-btn" class="btn px-7 bg-red-400 text-white hidden">See More</button>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://kit.fontawesome.com/e54fa4f5fc.js" crossorigin="anonymous"></script>
+    <script src="Al.js"></script>
+</body>
+</html>
