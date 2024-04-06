@@ -91,7 +91,14 @@ const a=1
  <li class="text-sm my-1 text-gray-600">${toolsDetails.integrations[2]}</li>
 </div>
    </div>
- </div>
+   </div>
+
+   <div>
+<figure class="w-[400px]"><img class="rounded" src="${toolsDetails.image_link[0]}"></figure>
+<h2 class="font-bold text-xl text-center my-2">${toolsDetails.input_output_examples[0].input}</h2>
+<p>${toolsDetails.input_output_examples[0].output}</p>
+
+</div>
     `;
 
    show_ai_details.showModal()
