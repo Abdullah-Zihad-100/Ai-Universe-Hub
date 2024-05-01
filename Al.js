@@ -48,11 +48,25 @@ const displayData = (tools, isSeeAll) => {
 
     aiCardContainer.appendChild(aiCard);
   });
+      handleSpinner(false);
 };
+
+
 
 document.getElementById("sort-btn").addEventListener("click", function () {
   handleSortBtn();
 });
+
+
+
+const handleSpinner = (isLoading) => {
+  const spinner = document.getElementById("spinner");
+  if (isLoading===true) {
+    spinner.classList.remove("hidden");
+  } else {
+    spinner.classList.add("hidden");
+  }
+};
 
 const handelSeeMore = () => {
   lordData(true);
@@ -91,7 +105,7 @@ const showDetailsAi = (toolsDetails) => {
   const a = 1;
 
   aiDetailsContainer.innerHTML = `
-    <div class="border p-6 pb-12 rounded-xl border-red-400 bg-red-50">
+    <div class="border p-6 pb-12 rounded-xl border-red-400 bg-red-50 ">
     <h2 class="font-bold text-xl">${toolsDetails.description}</h2>
     <div class="flex gap-3 m-4 justify-end items-center">
     <div class="p-4 text-center rounded-xl bg-white"><span class="text-green-600 font-bold">${toolsDetails.pricing[0].price}</span> <br> <span class="text-green-600 font-bold">${toolsDetails.pricing[0].plan}</span></div>
@@ -124,5 +138,7 @@ const showDetailsAi = (toolsDetails) => {
 
   showModal();
 };
+
+
 
 lordData();
